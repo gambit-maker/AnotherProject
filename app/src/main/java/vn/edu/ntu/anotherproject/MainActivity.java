@@ -3,6 +3,7 @@ package vn.edu.ntu.anotherproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,8 +11,43 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //This is a test String
-        //this is Another test String
-        //this is Another Another test string
+        Log.d("LifeCycle","onCreate");
+
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d("LifeCycle","onStart");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.d("LifeCyle","onRestart");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d("LifeCycle","onResume");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d("LifeCycle","onPause");
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.d("LifeCycle","onStop");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d("LifeCycle","onDestroy");
     }
 }
